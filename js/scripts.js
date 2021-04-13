@@ -36,4 +36,54 @@ $(document).ready(function() {
     $("[data-fancybox]").fancybox();
 
 
+	// языки
+	$('.language').click(function(){
+        if ($('.language').hasClass("show")) {
+            $('.language').removeClass('show');
+        }else{
+            $('.language').addClass('show');
+        }
+    });
+
+	// добовляет класс подменю
+    $('ul.menu > li').each(function(){
+		var list = $(this).children('ul');
+
+		if(list.length > 0){
+			list.parent().addClass('submenu');
+		};
+	});
+
+	//кнопка бургер меню
+    $('.menu_botton').on('click', function(e){
+		if( !$(this).hasClass('active') ) {
+			$(this).addClass('active');
+			$("nav").slideDown(500);
+		}else{
+			$(this).removeClass('active');
+			$("nav").slideUp(500); 
+		}
+	});
+
+
+    if ( /*window.innerWidth > 600 &*/ window.innerWidth < 1024 ) {
+	    $('.menu .submenu > a').on('click', function(e){
+		    if( !$(this).parent().hasClass('show') ) {
+				$(".menu .submenu").removeClass('show'); 
+				$(".menu .submenu").children('ul').slideUp(500);
+				$(this).parent().addClass('show');  
+				$(this).parent().children('ul').slideDown(500);
+				e.preventDefault();
+		    }
+		});
+    };
+
+	/*$(window).on('load scroll resize', function(){
+		//var height = $(window).height() - 100;
+		if($(this).scrollTop() > 10) {
+		    $('#main_header').addClass('scroll');
+		} else {
+		    $('#main_header').removeClass('scroll');
+		} 
+	});*/
 });
