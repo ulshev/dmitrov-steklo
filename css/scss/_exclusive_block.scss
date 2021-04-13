@@ -1,0 +1,56 @@
+/* start exclusive_block styles */ 
+
+#exclusive_block {
+    overflow: hidden;
+    
+    .page_width {
+		padding-top: 100px;
+        padding-bottom: 80px;
+    }
+}
+
+.exclusive_container {
+    padding-top: 30px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+    }
+
+    .image {
+        float: right;
+    }
+}
+
+
+
+@media screen and (min-width: 1030px) {
+    
+}
+
+
+@media screen and (max-width: 1500px) {
+	
+}
+
+@media screen and (max-width: 1030px) {
+	
+}
+
+@media screen and (max-width: 900px) {
+	
+}
+@media screen and (max-width: 800px) {
+    
+}
+
+@media screen and (max-width: 600px) {
+    
+}
+
+@media screen and (max-width: 450px) {
+    
+}
+
+/* end exclusive_block styles */
