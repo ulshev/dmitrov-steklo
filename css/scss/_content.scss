@@ -1,0 +1,200 @@
+.title{
+    .breadcrumbs{
+        ul li{
+            display: inline-block;
+             
+            a::after{
+                content: "/";
+                margin-left: 3px;
+            }
+        }
+        .active{
+            color: #1FCEF7;
+        }
+        
+    }
+
+    h1{
+        margin-top: 20px;
+    }
+}
+
+.product_tipes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 70px;
+
+    .tipes_item{
+        width: calc(50% - 30px);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        z-index: 1;
+        text-align: center;
+        border-radius: 5px;
+        transition: all .3s;
+
+
+        p{
+            line-height: 25px;
+            font-size: 24px;
+            font-weight: 700;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .green{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            transition: all .3s;
+            opacity: 0;
+            p,a{
+                color: #fff;
+            }
+            a{
+                position: absolute;
+                opacity: 0;
+                //bottom: 170px;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: all .4s;
+            }
+            //background-image: url(../images/jar_green.jpg);
+        }
+    }
+
+    .tipes_item{
+        &:hover{
+            box-shadow: 20px 20px 20px rgba(0, 43, 43, 0.1);
+            .green{
+                background-size: cover;
+                opacity: 1;
+                backdrop-filter: opacity(1);
+                pointer-events: none;
+
+                a{
+                    opacity: 1;
+                    bottom: calc(40% - 20px);
+                }
+            }
+        }
+    }
+    .jar{
+        &:hover{
+            .green{
+                background-image: url(../../images/jar_green.jpg);
+            }
+        }
+    }
+    .bottle{
+        &:hover{
+            .green{
+                background-image: url(../../images/bottle_green.jpg);
+            }
+        }
+    }
+}
+
+.text{
+    h2{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width:1280px) {
+    .product_tipes .tipes_item{
+
+            &:hover{
+                .green a{
+                        opacity: 1;
+                        bottom: calc(40% - 30px);
+                    }
+            }
+            
+        }
+}
+@media screen and (max-width:1024px){
+    .title  h1{
+            margin-top: 10px;
+    }
+
+    
+    .product_tipes{
+        margin-bottom: 50px;
+        .tipes_item{
+
+            p{
+                font-size: 18px;
+            }
+            width: calc(50% - 20px);
+
+            &:hover{
+                .green a{
+                        opacity: 1;
+                        bottom: calc(40% - 30px);
+                    }
+            }
+            
+        }
+    }
+    .text h2{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width:666px){
+    .product_tipes{
+        .tipes_item{
+
+            p{
+                font-size: 16px;
+                line-height: 20px;
+            }
+            width: calc(50% - 10px);
+
+            &:hover{
+                .green a{
+                        opacity: 1;
+                        bottom: calc(40% - 30px);
+                    }
+            }
+            
+        }
+    }
+}
+@media screen and (max-width:480px){
+    .product_tipes 
+        .tipes_item{
+            width: calc(50% - 5px);
+            
+        }
+}
+@media screen and (max-width:425px){
+    .title  h1{
+        margin-top: 5px;
+    }
+    .product_tipes{
+        margin-top: 32px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        .tipes_item{
+            width: 100%;
+            margin-bottom: 10px;
+            
+        }
+    }
+    .text h2{
+        margin-bottom: 10px;
+    }
+}

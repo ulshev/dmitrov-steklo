@@ -847,67 +847,92 @@ ul.slick-dots {
 
 .pagination{
     text-align: center;
-    margin-bottom: 60px;
+    //margin-bottom: 60px;
     ul{
         li{
             display: inline-block;
-            font-size: 22px;
             line-height: 25px;
             margin: 0 13px;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 21px;
-            font-weight: 600;
+            font-weight: 700;
 
             a{
                 box-sizing: border-box;
                 display: block;
                 text-decoration: none;
                 color: $color_text;
-                width: 40px;
-                height: 40px;
-                padding-top: 9px; 
-                border: 1px solid #212121;
+                border-radius: 50px;
+                width: 30px;
+                height: 30px;
+                padding-top: 5px; 
+                //border: 1px solid #212121;
                 @include transition(all);
 
                 &.activ, &:hover {
-                    color: #fff;
-                    background-color: $color_text;
+                    background: linear-gradient(180deg, #A3E419 15.1%, #83BB0D 100%);
                 }
             }
-            .next, .prev {
+            .pag-ar{
                 font-size: 16px;
                 line-height: 18px;
                 width: auto;
                 height: auto;
                 padding-top: 0;
-                font-weight: 300;
+                font-weight: 700;
                 border: 0;
+                &:hover{
+                    background: none;
+                }
+            }
+            .prev , .next{
+                display: inline-block;
+                position: relative;
+                margin-bottom: -10px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                overflow: hidden;
+                border-radius: 50%;
+                box-sizing: border-box;
+                background-color: #E1E7EB;
+                @include transition(all);
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: 2;
+                    width: 10px;
+                    height: 10px;
+                    top: 10px;
+                    
+                    border-top: 3px solid $color_text;
+                    border-left: 3px solid $color_text;
+                    box-sizing: border-box;
+                    @include transition(all);
+                }
+                
+                &:hover {
+                    background: none;
+                    background-color: $color_text;
+                    &:before {
+                        border-color: #fff;
+                    }
+                }
             }
             .prev {
-                margin-right: 30px;
-                &::before {
-                    content: "";
-                    display: inline-block;
-                    width: 16px;
-                    height: 16px;
-                    border-top: 2px solid $color_text;
-                    border-left: 2px solid $color_text;
-                    box-sizing: border-box;
-                    margin-bottom: -4px;
+                margin-right: -13px;
+                &:before {
+                    right: 50%;
+                    margin-right: -6px;
                     transform: rotate(-45deg);
                 }
             }
             .next {
-                margin-left: 30px;
-                &::after {
-                    content: "";
-                    display: inline-block;
-                    width: 16px;
-                    height: 16px;
-                    border-top: 2px solid $color_text;
-                    border-left: 2px solid $color_text;
-                    box-sizing: border-box;
-                    margin-bottom: -4px;
+                margin-left: -13px;
+                &:before {
+                    left: 50%;
+                    margin-left: -6px;
                     transform: rotate(135deg);
                 }
             }

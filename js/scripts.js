@@ -57,15 +57,15 @@ $(document).ready(function() {
     $('.menu_botton').on('click', function(e){
 		if( !$(this).hasClass('active') ) {
 			$(this).addClass('active');
-			$("nav").slideDown(500);
+			$(".block_menu").slideDown(500);
 		}else{
 			$(this).removeClass('active');
-			$("nav").slideUp(500); 
+			$(".block_menu").slideUp(500); 
 		}
 	});
 
 
-    if ( /*window.innerWidth > 600 &*/ window.innerWidth < 1024 ) {
+    if ( window.innerWidth < 1030 ) {
 	    $('.menu .submenu > a').on('click', function(e){
 		    if( !$(this).parent().hasClass('show') ) {
 				$(".menu .submenu").removeClass('show'); 
