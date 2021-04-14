@@ -2,23 +2,34 @@
 
 #exclusive_block {
     overflow: hidden;
+    background: linear-gradient(180deg, #E8EAEB 0%, #F5F5F8 50.95%, #FDFDFD 67.71%, #FBFBFB 82.88%, #E6E7EA 100%);
     
     .page_width {
 		padding-top: 100px;
-        padding-bottom: 80px;
+        padding-bottom: 100px;
     }
 }
 
 .exclusive_container {
     padding-top: 30px;
+    padding-bottom: 80px;
     position: relative;
 
     &::before {
         content: '';
         position: absolute;
-        width: 1170px;
+        width: 509px;
+        height: 530px;
+        left: 17px;
+        top: 97px;
+        background: url(../images/branch.png) no-repeat center / contain;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1170/1530*100%;
         height: 483px;
-        right: 0;
+        right: 20px;
         bottom: 0;
         background: linear-gradient(180deg, #A3E419 15.1%, #83BB0D 100%);
         box-shadow: 0px 20px 40px rgba(0, 19, 19, 0.25);
@@ -27,10 +38,45 @@
     .image {
         float: right;
         position: relative;
+        margin-right: 6.55%;
+        width: 615/1530*100%;
+        height: 490px;
+        z-index: 2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .text {
         position: relative;
+        background: #FFFFFF;
+        box-shadow: 20px 20px 50px rgba(0, 43, 43, 0.55);
+        z-index: 1;
+        min-height: 410px;
+        box-sizing: border-box;
+        width: 690/1530*100%;
+        padding: 60px 10% 40px 3.9%;
+        margin: 40px 0 40px 17%;
+
+        h4 {
+            padding-bottom: 20px;
+            border-bottom: 2px solid #E1E7EB;
+            display: inline-block;
+        }
+
+        ul {
+            margin-bottom: 15px;
+        }
+
+        .button {
+            &:first-child {
+                margin-right: 50px;
+            }
+        }
+        
     }
 }
 

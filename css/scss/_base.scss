@@ -53,7 +53,7 @@ body {
     min-height: 100%;
     //padding-top: 80px;
     
-	background:  url(../images/site.jpg) no-repeat center top;
+	//background:  url(../images/site.jpg) no-repeat center top;
 	//background-size: 1920px auto;
 }
 
@@ -650,36 +650,39 @@ ul.slick-dots {
 }
 
 .text {
-    // h2 {
-    //     margin-bottom: 25px;
-    // }
     ul {
-        //counter-reset: ol_ounter;
-		margin-bottom: 25px;
-		padding-top: 4px;
+		padding-bottom: 15px;
+		//padding-top: 4px;
         margin-left: -5px;
         
 		li {
 			//margin-bottom: 10px;
             position: relative;
-			padding: 0px 0 0px 13px;
-			margin-bottom: 10px;
+			padding: 0px 0 0px 25px;
+			margin-bottom: 6px;
 			margin-left: 4px;
 			overflow: hidden;
-            
-            p{
-                position: relative;
-                z-index: 1;
-                margin-bottom: 0;
-            }
 			&::before{
                 content: "";
                 position: absolute;
-                width: 20px;
-                height: 20px;
+                width: 18px;
+                height: 18px;
                 top: 0px;
                 left: 0px;
-                background: repeating-linear-gradient(-45deg, #FFF500, #FFF500 1px, transparent 1px, transparent 3px);
+                border-radius: 50%;
+                background: linear-gradient(180deg, #A3E419 15.1%, #83BB0D 100%);
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 8px;
+                height: 5px;
+                top: 7px;
+                left: 6px;
+                border-left: 2px solid #FFFFFF;
+                border-bottom: 2px solid #FFFFFF;
+                box-sizing: border-box;
+                transform: rotate(-45deg);
             }
         }
 	}
