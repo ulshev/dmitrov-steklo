@@ -83,6 +83,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 100%;
+  background: url(../images/site.jpg) no-repeat center top;
 }
 
 .main_section {
@@ -402,28 +403,22 @@ h6, .h6 {
 }
 
 .all_link, .more {
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 22px;
   position: relative;
   z-index: 1;
-  font-weight: 500;
+  font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
+  font-weight: 700;
   color: #000037;
 }
 
-.all_link::after, .more::after {
-  content: "";
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 21px;
-  width: 40px;
-  height: 10px;
-  position: relative;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  background: url(images/arrow.svg) no-repeat right center;
+.all_link:hover, .more:hover {
+  text-decoration: none;
+  color: #323269;
 }
 
 .all_link {
-  margin-top: -50px;
+  margin-top: -48px;
   float: right;
 }
 
@@ -2208,7 +2203,7 @@ header .block_menu nav .submenu:hover a::after {
 }
 
 .partners_slider {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .partners_slider .slick-arrow {
@@ -2241,6 +2236,106 @@ header .block_menu nav .submenu:hover a::after {
 }
 
 /* end partners styles */
+/* start about styles */
+#about {
+  overflow: hidden;
+}
+
+#about .page_width {
+  padding-bottom: 100px;
+}
+
+#about .image {
+  float: right;
+  margin-top: 80px;
+}
+
+#about .about_image {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15.1%, #00E3C8), to(#0AC5AA));
+  background: linear-gradient(180deg, #00E3C8 15.1%, #0AC5AA 100%);
+  height: 460px;
+  width: 43.79085%;
+}
+
+#about .about_image .shift {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: -60px;
+  left: -60px;
+  overflow: hidden;
+  -webkit-filter: drop-shadow(0px 20px 60px rgba(4, 29, 47, 0.6));
+          filter: drop-shadow(0px 20px 60px rgba(4, 29, 47, 0.6));
+}
+
+#about .about_image .inscription {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px;
+  height: 381px;
+  margin: -190px 0 0 -190px;
+  background: url(../images/inscription.svg) no-repeat center/contain;
+  text-indent: -10000px;
+  -webkit-animation: rotation 10s linear infinite;
+          animation: rotation 10s linear infinite;
+}
+
+#about .text {
+  margin-top: 104px;
+  max-width: 46%;
+}
+
+#about .sections {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  padding-right: 6px;
+}
+
+#about .sections a {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 8px;
+}
+
+#about .sections a:hover {
+  text-decoration: none;
+  border-color: #000037;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* end about styles */
 .title .breadcrumbs ul li {
   display: inline-block;
 }
@@ -2424,4 +2519,118 @@ header .block_menu nav .submenu:hover a::after {
     margin-bottom: 10px;
   }
 }
+
+/* start blog styles */
+#blog {
+  overflow: hidden;
+}
+
+#blog .page_width {
+  padding-bottom: 60px;
+}
+
+.blog_container {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog_container:not(.blog_slider) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px 30px;
+}
+
+.blog_container:not(.blog_slider) .item {
+  width: calc(25% - 30px);
+}
+
+.blog_container.blog_slider {
+  margin-bottom: -15px;
+  padding-top: 15px;
+}
+
+.blog_container.blog_slider .item {
+  opacity: 0;
+}
+
+.blog_container.blog_slider .item.slick-active {
+  opacity: 1;
+}
+
+.blog_container .slick-list {
+  overflow: visible;
+}
+
+.blog_container .item {
+  position: relative;
+  border-radius: 5px;
+  margin: 0 15px 55px;
+  height: 330px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  background: url(../images/bg_blog_item_normal.png), -webkit-gradient(linear, left top, left bottom, color-stop(23.96%, #1B537D), to(#0E2A53));
+  background: url(../images/bg_blog_item_normal.png), linear-gradient(180deg, #1B537D 23.96%, #0E2A53 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-box-shadow: 20px 20px 40px rgba(4, 29, 47, 0.3);
+          box-shadow: 20px 20px 40px rgba(4, 29, 47, 0.3);
+}
+
+.blog_container .item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg_blog_item_hover.png), -webkit-gradient(linear, left top, left bottom, from(#E6E7EA), color-stop(50.95%, #F5F5F8), color-stop(67.71%, #FDFDFD), color-stop(82.88%, #FBFBFB), to(#E8EAEB));
+  background: url(../images/bg_blog_item_hover.png), linear-gradient(180deg, #E6E7EA 0%, #F5F5F8 50.95%, #FDFDFD 67.71%, #FBFBFB 82.88%, #E8EAEB 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.blog_container .item:hover::before {
+  opacity: 1;
+}
+
+.blog_container .item a {
+  position: absolute;
+  widows: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px;
+  color: #fff;
+}
+
+.blog_container .item a:hover {
+  text-decoration: none;
+}
+
+.blog_container .item time {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.blog_container .item .more {
+  position: absolute;
+  left: 30px;
+  bottom: 60px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+
+/* end blog styles */
 /*# sourceMappingURL=style.css.map */

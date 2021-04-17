@@ -53,7 +53,7 @@ body {
     min-height: 100%;
     //padding-top: 80px;
     
-	//background:  url(../images/site.jpg) no-repeat center top;
+	background:  url(../images/site.jpg) no-repeat center top;
 	//background-size: 1920px auto;
 }
 
@@ -425,33 +425,33 @@ h6, .h6 {
 .all_link, .more {
 	//float: right;
     //margin-top: -50px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 22px;
     //letter-spacing: 0.03em;
     position: relative;
     z-index: 1;
-    font-weight: 500;
+    font-family: $font_family_h;
+    font-weight: 700;
     color: $color_text;
-    &::after {
-        content: "";
-        display: inline-block;
-        margin-left: 10px;
-        font-size: 21px;
-        width: 40px;
-        height: 10px;
-        position: relative;
-        @include transition(all);
-        background: url(images/arrow.svg) no-repeat right center;
-    }
-
-    // &:hover {
-    //     //text-decoration: none;
-    //     &::after {
-    //         left: 2px;
-    //     }
+    // &::after {
+    //     content: "";
+    //     display: inline-block;
+    //     margin-left: 10px;
+    //     font-size: 21px;
+    //     width: 40px;
+    //     height: 10px;
+    //     position: relative;
+    //     @include transition(all);
+    //     background: url(images/arrow.svg) no-repeat right center;
     // }
+
+    &:hover {
+        text-decoration: none;
+        color: $color_a_hover;
+    }
 }
 .all_link {
-    margin-top: -50px;
+    margin-top: -48px;
     float: right;
 }
 

@@ -1,0 +1,144 @@
+/* start blog styles */ 
+
+#blog {
+    overflow: hidden;
+    
+    .page_width {
+		//padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    
+}
+
+.blog_container {
+    position: relative;
+    overflow: hidden;
+
+    &:not(.blog_slider) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px 30px;
+
+        .item {
+            width: calc(25% - 30px);
+        }
+    }
+
+    &.blog_slider {
+        margin-bottom: -15px;
+        padding-top: 15px;
+
+        .item {
+            opacity: 0;
+
+            &.slick-active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .slick-list {
+        overflow: visible;
+    }
+
+    .item { 
+        position: relative;
+        border-radius: 5px;
+        margin: 0 15px 55px;
+        height: 330px;
+        overflow: hidden;
+        @include transition(all);
+        background:  url(../images/bg_blog_item_normal.png), linear-gradient(180deg, #1B537D 23.96%, #0E2A53 100%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 20px 20px 40px rgba(4, 29, 47, 0.3);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../images/bg_blog_item_hover.png), linear-gradient(180deg, #E6E7EA 0%, #F5F5F8 50.95%, #FDFDFD 67.71%, #FBFBFB 82.88%, #E8EAEB 100%);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0;
+            @include transition(all);
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        a {
+            position: absolute;
+            widows: 100%;
+            height: 100%;
+            //background:;
+            box-sizing: border-box;
+            padding: 30px;
+            color: #fff;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        time {
+            display: block;
+            margin-bottom: 40px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .more {
+            position: absolute;
+            left: 30px;
+            bottom: 60px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #fff;
+        }
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1030px) {
+    
+}
+
+
+@media screen and (max-width: 1500px) {
+	
+}
+
+@media screen and (max-width: 1030px) {
+	
+}
+
+@media screen and (max-width: 900px) {
+	
+}
+@media screen and (max-width: 800px) {
+    
+}
+
+@media screen and (max-width: 600px) {
+    
+}
+
+@media screen and (max-width: 450px) {
+    
+}
+
+/* end blog styles */

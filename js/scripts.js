@@ -157,5 +157,32 @@ $(document).ready(function() {
 		]
 	});
 
+	$('.blog_slider').slick({
+	    slidesToShow: 3,
+	    slidesToScroll: 1,
+	    infinite: true,
+	    dots: false,
+	    //focusOnSelect: true,
+		arrows: true,
+		prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		nextArrow: '<span class="slick-next">&nbsp;</span>',
+		responsive: [
+			{
+				breakpoint: 1100,
+				settings: {
+				  slidesToShow: 2,
+				}
+			},
+			
+			{
+				breakpoint: 601,
+				settings: {
+				  slidesToShow: 1,
+				  dots: true,
+				}
+			},
+		]
+	});
+
 	
 });
