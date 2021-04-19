@@ -13,6 +13,19 @@
 		padding-top: 170px;
     }
     
+	.title{
+		margin-top: 20px;
+		position: relative;
+
+		.breadcrumbs{
+			ul li > a{
+				font-weight: 400;
+				color: #fff;
+			}
+			
+		}
+	}
+
     .text {       
 		max-width: 730px;
 		height: calc(1000px - 345px);
