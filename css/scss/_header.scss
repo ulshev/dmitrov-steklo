@@ -10,9 +10,26 @@ header{
     #logo{
         float: left;
         width: 217px;
+        text-align: center;
         img{
-            width: 217px;
+            width: 125px;
         }
+
+        .sub_logo {
+			display: inline-block;
+			width: 100%;
+			vertical-align: bottom;
+			font-size: 23px;
+			line-height: 29px;
+			padding-top: 3.5px;
+            color: #0063A5;
+
+			strong {
+				display: block;
+				letter-spacing: 3px;
+				font-family: $font_family_h;
+			}
+		}
     }
 
     .button{
@@ -164,7 +181,12 @@ header{
                 height: 40px;
                 border: none;
                 background-color: transparent;
-
+                width: calc(100% - 40px);
+                box-sizing: border-box;
+                font-family: $font_family_os;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
                 &::placeholder{
 
                 color: #8DB2CB;
@@ -200,6 +222,11 @@ header{
                             text-decoration: none;
                             color: #1FCEF7;
                         }
+
+                    }
+
+                    li  ul {
+                        display: none;
                     }
             }
             .submenu {
@@ -235,7 +262,7 @@ header{
                 left: 0;//right: -50%;
                 top: 100%; //150%;
                 //margin-top: 10px;
-                
+                display: block;
                 box-shadow: 10px 10px 20px rgba(0, 43, 43, 0.1);
                 padding: 10px 0;
                 pointer-events: none;
@@ -286,9 +313,13 @@ header{
     background-color: #FFF;
 }
 
-.nobg{
+header.nobg{
     position: absolute;
     z-index: 10;
+
+    #logo .sub_logo {
+        color: #fff;
+    }
 
     .contacts{
         a{

@@ -87,6 +87,31 @@ $(document).ready(function() {
 	});*/
 
 
+	// Проверка заполнености полей формы
+	$('.rf').each(function(){
+		var form = $(this)
+		//form.find('.rfield').addClass('empty_field');
+	
+		function checkInput(){
+		  form.find('.rfield').each(function(){
+			if($(this).val() != ''){
+				$(this).addClass('filled_field');
+			} else {
+				$(this).removeClass('filled_field');
+			}
+		  });
+		}
+		setInterval(function(){
+		  checkInput();
+		},500);
+	});
+	//Добавление имени файла в форме при выборе
+	$("#file").change(function(){
+		var filename = $(this).val().replace(/.*\\/, "");
+		$("#file_name").html(filename);
+   });
+
+
 
 
 

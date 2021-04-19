@@ -12,21 +12,24 @@
 
 .blog_container {
     position: relative;
-    overflow: hidden;
+    
 
     &:not(.blog_slider) {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -15px 30px;
+        margin: 0 -15px 0px;
+        padding-bottom: 20px;
 
         .item {
-            width: calc(25% - 30px);
+            width: calc(33.33% - 30px);
+            margin-bottom: 30px;
         }
     }
 
     &.blog_slider {
         margin-bottom: -15px;
         padding-top: 15px;
+        overflow: hidden;
 
         .item {
             opacity: 0;

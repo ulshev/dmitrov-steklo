@@ -1,0 +1,7 @@
+.DS_Store
+.map
+.sass-cache
+
+media/
+
+site.jpg
