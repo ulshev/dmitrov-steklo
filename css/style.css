@@ -493,6 +493,20 @@ ul.slick-dots li button {
   display: none;
 }
 
+.our_history_slider .slick-arrow {
+  background: linear-gradient(180deg, #A3E419 15.1%, #83BB0D 100%);
+  top: 60%;
+  margin-top: 0px;
+}
+
+.our_history_slider .slick-prev {
+  left: calc(40% - 40px);
+}
+
+.our_history_slider .slick-next {
+  right: calc(50% + 80px);
+}
+
 @media screen and (max-width: 1400px) {
   .slick-slider {
     margin: 0 -5px;
@@ -1107,6 +1121,7 @@ header .block_menu nav .submenu:hover > ul {
   opacity: 1;
   pointer-events: initial;
   z-index: 2;
+  display: block;
 }
 header .block_menu nav .submenu:hover a::after {
   transform: rotate(135deg);
@@ -2957,6 +2972,104 @@ footer .social * {
 }
 
 /*end galery*/
+/*start about factory*/
+.serteficats {
+  display: flex;
+  margin: 0 -15px;
+  position: relative;
+  z-index: 2;
+}
+.serteficats .item {
+  width: calc(33% - 30px);
+  margin: 0 15px;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 15px 15px 40px rgba(0, 43, 43, 0.2);
+  border-radius: 5px;
+}
+.serteficats .item img {
+  display: inline-block;
+  margin: 0 20px;
+}
+.serteficats .item p {
+  margin-top: 42px;
+  padding: 0 75px;
+}
+
+.block_about {
+  position: relative;
+  z-index: 2;
+  padding-top: 60px;
+  padding-bottom: 250px;
+  display: flex;
+  align-items: center;
+}
+.block_about::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 757px;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background: #fff url(../images/about_company_bg.jpg) no-repeat top/100% auto;
+}
+.block_about h2 {
+  margin-bottom: 152px;
+}
+.block_about .text {
+  width: 50%;
+  margin-right: 50%;
+}
+.block_about .text .button {
+  margin-top: 60px;
+}
+
+/*end about factory*/
+/*start vacansis*/
+.open_vacansis .container {
+  position: relative;
+  box-sizing: border-box;
+  padding: 39px 60px;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 43, 43, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  /*.active{
+      display: block;
+  }*/
+}
+.open_vacansis .container:after {
+  content: "";
+  position: absolute;
+  top: 39px;
+  right: 60px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #E1E7EB;
+}
+.open_vacansis .container h4 {
+  margin-bottom: 0px;
+}
+.open_vacansis .container .open_block {
+  display: none;
+  padding: 20px 20px 30px;
+}
+.open_vacansis .container .open_block h5 {
+  margin-bottom: 10px;
+}
+.open_vacansis .container .open_block p {
+  margin-bottom: 20px;
+}
+.open_vacansis .container .open_block .button {
+  margin-top: 20px;
+}
+.open_vacansis .active .open_block {
+  display: block;
+}
+
+/*end vacansis*/
 /* start contacts styles*/
 .contacts a {
   font-size: 18px;

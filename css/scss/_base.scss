@@ -610,6 +610,22 @@ ul.slick-dots {
 }
 
 
+.our_history_slider .slick-arrow{
+    background: linear-gradient(180deg, #A3E419 15.1%, #83BB0D 100%);
+    top: 60%;
+    //bottom: 10%;
+    margin-top: 0px;
+}
+
+.our_history_slider  .slick-prev {
+    left: calc(40% - 40px);
+    //margin-left: -48px;
+}
+.our_history_slider  .slick-next {
+    right: calc(50% + 80px);
+    //margin-right: -48px;
+}
+
 @media screen and (max-width: 1400px) {
 	.slick-slider {
 		margin: 0 -5px;

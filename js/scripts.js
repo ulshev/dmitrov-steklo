@@ -112,8 +112,10 @@ $(document).ready(function() {
    });
 
 
-
-
+	$('.container').click(function(){
+	    $(this).children('.open_block').slideToggle(700);
+	    $(this).children('.open_block').toggleClass('active');
+   });
 
 	$('.catalog_slider').slick({
 	    slidesToShow: 4,
@@ -263,5 +265,15 @@ $(document).ready(function() {
 		]
 	});
 
+	$('.our_history_slider').slick({
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    infinite: true,
+	    dots: false,
+	    //focusOnSelect: true,
+		arrows: true,
+		prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		nextArrow: '<span class="slick-next">&nbsp;</span>',
+	});
 	
 });
