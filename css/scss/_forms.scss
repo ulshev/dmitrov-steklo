@@ -164,10 +164,10 @@
 		position: relative;
 		z-index: 1;
 		
-		&::-webkit-input-placeholder {opacity: 0.5; color: #333333;}
-		&::-moz-placeholder          {opacity: 0.5; color: #333;}/* Firefox 19+ */
-		&:-moz-placeholder           {opacity: 0.5; color: #333;}/* Firefox 18- */
-		&:-ms-input-placeholder      {opacity: 0.5; color: #333;}
+		&::-webkit-input-placeholder {opacity: 0; color: #333333;}
+		&::-moz-placeholder          {opacity: 0; color: #333;}/* Firefox 19+ */
+		&:-moz-placeholder           {opacity: 0; color: #333;}/* Firefox 18- */
+		&:-ms-input-placeholder      {opacity: 0; color: #333;}
 
 		&:active, &:focus {
 			//border: 1px solid #134983;
@@ -181,17 +181,22 @@
 		//padding-top: 20px;
 		resize: none;
     }
-    
+    .gUniForm input[type="text"] {
+		padding: 15px 20px 5px 20px;
+	}
     .input_file {
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
 		margin-right: 16px;
 		margin-bottom: 32px;
-		
 		font-size: 14px;
 		line-height: 20px;
     }
+
+	.gUniForm .input_file {
+		margin-top: -5px;
+	}
     
     input[type="file"] {
 		position: absolute;
@@ -208,6 +213,7 @@
 		line-height: 38px;
 		margin-bottom: 10px;
 		margin-right: 20px;
+		cursor: pointer;
 		
 		&::before {
 			content: '';
@@ -215,7 +221,7 @@
 			width: 15px;
 			height: 15px;
 			margin-right: 10px;
-			background:  url(../images/clip.svg) no-repeat center top;
+			background:  url(images/clip.svg) no-repeat center top;
 		}
 
 		&::after {
@@ -280,7 +286,7 @@
 			height: 5px;
 			position: absolute;
 			left: 1px;
-   			top: 5px;
+   			top: 3px;
 			@include transition(all);
             opacity: 0;
             border-left: 2px solid $color_text;
@@ -299,6 +305,13 @@
 		&:after {
 			opacity: 1;
 		}
+	}
+
+	.gUniForm input[type="checkbox"] + label, .gUniForm input[type="radio"] + label {
+		margin-right: 0px; 
+	}
+	.gUniForm input[type="checkbox"]:not(checked) + label, .gUniForm input[type="radio"]:not(checked) + label {
+		padding-left: 25px;
 	}
 	
 	a {
@@ -322,6 +335,32 @@
 			top: 0px;
 		}
     }
+
+	.gUniForm {
+		.uformTools {
+			margin-top: -5px;
+		}
+		.uFormButton {
+			float: none;
+			width: auto;
+			margin-top: 0;
+			&:last-child, &:first-child {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
+		.uFormSubmit, .uFormReset {
+			font-size: 16px;
+    		line-height: 20px;
+			border-radius: 5px;
+			height: 44px;
+
+			&:active {
+				top: 0;
+			}
+		}
+	}
 
 	.buttons {
 		text-align: right;

@@ -29,7 +29,7 @@ header{
 				letter-spacing: 3px;
 				font-family: $font_family_h;
                 color: transparent;
-                background: url(../images/logo_sub.svg) left center no-repeat;
+                background: url(images/logo_sub.svg) left center no-repeat;
 			}
 		}
     }
@@ -54,12 +54,12 @@ header{
         }
         .tel{
             &::before{
-             background-image: url(../images/icon_phon.svg);
+             background-image: url(images/icon_phon.svg);
             }
          }
          .email{
              &::before{
-                 background-image: url(../images/icon_mail.svg);
+                 background-image: url(images/icon_mail.svg);
              }
          }
     }
@@ -270,21 +270,24 @@ header{
                 //margin-top: 10px;
                 display: block;
                 box-shadow: 10px 10px 20px rgba(0, 43, 43, 0.1);
-                padding: 10px 0;
+                padding: 15px 0 20px;
                 pointer-events: none;
                 transition: all .3s ;
                 background-color: #FFF;
                 border-radius: 5px;
                 overflow: hidden;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
         
                 li {
                     display: block;
-                    padding: 5px 35px 5px 20px;
+                    
                     width: 100%;
     
                     a{
-                        font-size: 16px;
-                        font-weight: 400;
+                        display: block;
+                        padding: 5px 35px 5px 20px;
                         &:hover{
                             color: $color_a;
                         }
@@ -328,7 +331,7 @@ header.nobg{
         color: #fff;
 
         strong {
-            background-image: url(../images/logo_sub_white.svg);
+            background-image: url(images/logo_sub_white.svg);
         }
     }
 

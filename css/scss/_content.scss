@@ -8,13 +8,17 @@
         ul li{
             display: inline-block;
              
-            a::after{
+            &::after{
                 content: "/";
                 margin-left: 3px;
             }
         }
         .active{
             color: #1FCEF7;
+
+            &::after {
+                display: none;
+            }
         }
     }
 
@@ -116,21 +120,21 @@ div.content {
         }
     }
     .jar{
-        background: url(../images/jar.jpg);
+        background: url(images/jar.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         &::before{
-            background-image: url(../images/jar_green.jpg),  linear-gradient(180deg, #1B537D 23.96%, #0E2A53 100%);
+            background-image: url(images/jar_green.jpg),  linear-gradient(180deg, #1B537D 23.96%, #0E2A53 100%);
         }
     }
     .bottle{
-        background: url(../images/bottle.jpg);
+        background: url(images/bottle.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         &::before{
-            background-image: url(../images/bottle_green.jpg);
+            background-image: url(images/bottle_green.jpg);
         }
     }
 }
@@ -364,6 +368,7 @@ div.content {
 .galery{
     position: relative;
     overflow: hidden;
+    padding-bottom: 10px;
 
     &:not(.galery_slider) {
         display: flex;
@@ -452,7 +457,7 @@ div.content {
         left: 0;
         top: 0;
         z-index: 0;
-        background: #fff url(../images/about_company_bg.jpg) no-repeat top/100% auto;
+        background: #fff url(images/about_company_bg.jpg) no-repeat top/100% auto;
 
     }
 

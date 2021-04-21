@@ -23,22 +23,22 @@
     }
     .tel{
         &::before{
-         background-image: url(../images/icon_phone_green.svg);
+         background-image: url(images/icon_phone_green.svg);
         }
      }
      .email{
          &::before{
-             background-image: url(../images/icon_mail_green.svg);
+             background-image: url(images/icon_mail_green.svg);
          }
      }
      .place{
         &::before{
-            background-image: url(../images/icon_place.svg);
+            background-image: url(images/icon_place.svg);
         }
      }
      .time{
         &::before{
-            background-image: url(../images/icon_time.svg);
+            background-image: url(images/icon_time.svg);
         }
      }
 }

@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 	// Проверка заполнености полей формы
 	$('.rf').each(function(){
-		var form = $(this)
+		var form = $(this);
 		//form.find('.rfield').addClass('empty_field');
 	
 		function checkInput(){
@@ -100,8 +100,17 @@ $(document).ready(function() {
 				$(this).removeClass('filled_field');
 			}
 		  });
+		  form.find('#file').each(function(){
+			if($(this).val() != ''){
+				$("#file_name").html(filename);
+			} else {
+				$("#file_name").html("Файл не выбран");
+			}
+		  });
 		}
 		setInterval(function(){
+			
+			//$("#file_name").html("Файл не выбран");
 		  checkInput();
 		},500);
 	});
@@ -109,7 +118,10 @@ $(document).ready(function() {
 	$("#file").change(function(){
 		var filename = $(this).val().replace(/.*\\/, "");
 		$("#file_name").html(filename);
-   });
+   	});
+
+
+
 
 
 	$('.container').click(function(){

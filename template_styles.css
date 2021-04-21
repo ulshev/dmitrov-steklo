@@ -1048,7 +1048,7 @@ header #logo .sub_logo strong {
   letter-spacing: 3px;
   font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
   color: transparent;
-  background: url(../images/logo_sub.svg) left center no-repeat;
+  background: url(images/logo_sub.svg) left center no-repeat;
 }
 
 header .button {
@@ -1073,11 +1073,11 @@ header .contacts a {
 }
 
 header .contacts .tel::before {
-  background-image: url(../images/icon_phon.svg);
+  background-image: url(images/icon_phon.svg);
 }
 
 header .contacts .email::before {
-  background-image: url(../images/icon_mail.svg);
+  background-image: url(images/icon_mail.svg);
 }
 
 header .menu_botton {
@@ -1316,24 +1316,26 @@ header .block_menu nav .submenu > ul {
   display: block;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 43, 43, 0.1);
           box-shadow: 10px 10px 20px rgba(0, 43, 43, 0.1);
-  padding: 10px 0;
+  padding: 15px 0 20px;
   pointer-events: none;
   -webkit-transition: all .3s;
   transition: all .3s;
   background-color: #FFF;
   border-radius: 5px;
   overflow: hidden;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 header .block_menu nav .submenu > ul li {
   display: block;
-  padding: 5px 35px 5px 20px;
   width: 100%;
 }
 
 header .block_menu nav .submenu > ul li a {
-  font-size: 16px;
-  font-weight: 400;
+  display: block;
+  padding: 5px 35px 5px 20px;
 }
 
 header .block_menu nav .submenu > ul li a:hover {
@@ -1378,7 +1380,7 @@ header.nobg #logo .sub_logo {
 }
 
 header.nobg #logo .sub_logo strong {
-  background-image: url(../images/logo_sub_white.svg);
+  background-image: url(images/logo_sub_white.svg);
 }
 
 header.nobg .contacts a {
@@ -1756,7 +1758,7 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   overflow: hidden;
   height: 100vh;
   min-height: 1000px;
-  background: url(../images/bg_main_screen.jpg) no-repeat center/cover;
+  background: url(images/bg_main_screen.jpg) no-repeat center/cover;
 }
 
 #main_screen .page_width {
@@ -2153,7 +2155,7 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   display: inline-block;
   width: 30px;
   height: 40px;
-  background: url(../images/icon_doc.svg) no-repeat center;
+  background: url(images/icon_doc.svg) no-repeat center;
   margin-right: 10px;
 }
 
@@ -2192,7 +2194,7 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   height: 530px;
   left: 17px;
   top: 97px;
-  background: url(../images/branch.png) no-repeat center/contain;
+  background: url(images/branch.png) no-repeat center/contain;
 }
 
 .exclusive_container::after {
@@ -2418,8 +2420,8 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   margin: -70px 0 0 -70px;
   width: 140px;
   height: 140px;
-  background: url(../images/icon_play.svg), -webkit-gradient(linear, left top, left bottom, color-stop(15.1%, #ADFF00), to(#356600));
-  background: url(../images/icon_play.svg), linear-gradient(180deg, #ADFF00 15.1%, #356600 100%);
+  background: url(images/icon_play.svg), -webkit-gradient(linear, left top, left bottom, color-stop(15.1%, #ADFF00), to(#356600));
+  background: url(images/icon_play.svg), linear-gradient(180deg, #ADFF00 15.1%, #356600 100%);
   background-position: 55% center, center;
   background-repeat: no-repeat;
   -webkit-box-shadow: 0px 20px 40px rgba(0, 19, 19, 0.25);
@@ -2513,7 +2515,7 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   width: 380px;
   height: 381px;
   margin: -190px 0 0 -190px;
-  background: url(../images/inscription.svg) no-repeat center/contain;
+  background: url(images/inscription.svg) no-repeat center/contain;
   text-indent: -10000px;
   -webkit-animation: rotation 10s linear infinite;
           animation: rotation 10s linear infinite;
@@ -2744,22 +2746,22 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
 }
 
 .form_block input[type="text"]::-webkit-input-placeholder, .form_block textarea::-webkit-input-placeholder {
-  opacity: 0.5;
+  opacity: 0;
   color: #333333;
 }
 
 .form_block input[type="text"]::-moz-placeholder, .form_block textarea::-moz-placeholder {
-  opacity: 0.5;
+  opacity: 0;
   color: #333;
 }
 
 .form_block input[type="text"]:-moz-placeholder, .form_block textarea:-moz-placeholder {
-  opacity: 0.5;
+  opacity: 0;
   color: #333;
 }
 
 .form_block input[type="text"]:-ms-input-placeholder, .form_block textarea:-ms-input-placeholder {
-  opacity: 0.5;
+  opacity: 0;
   color: #333;
 }
 
@@ -2772,6 +2774,10 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   resize: none;
 }
 
+.form_block .gUniForm input[type="text"] {
+  padding: 15px 20px 5px 20px;
+}
+
 .form_block .input_file {
   display: inline-block;
   vertical-align: top;
@@ -2780,6 +2786,10 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   margin-bottom: 32px;
   font-size: 14px;
   line-height: 20px;
+}
+
+.form_block .gUniForm .input_file {
+  margin-top: -5px;
 }
 
 .form_block input[type="file"] {
@@ -2797,6 +2807,7 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   line-height: 38px;
   margin-bottom: 10px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .form_block input[type="file"] + label::before {
@@ -2805,7 +2816,7 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   width: 15px;
   height: 15px;
   margin-right: 10px;
-  background: url(../images/clip.svg) no-repeat center top;
+  background: url(images/clip.svg) no-repeat center top;
 }
 
 .form_block input[type="file"] + label::after {
@@ -2870,7 +2881,7 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   height: 5px;
   position: absolute;
   left: 1px;
-  top: 5px;
+  top: 3px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   opacity: 0;
@@ -2886,6 +2897,14 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
 
 .form_block input[type="checkbox"]:checked + label:after {
   opacity: 1;
+}
+
+.form_block .gUniForm input[type="checkbox"] + label, .form_block .gUniForm input[type="radio"] + label {
+  margin-right: 0px;
+}
+
+.form_block .gUniForm input[type="checkbox"]:not(checked) + label, .form_block .gUniForm input[type="radio"]:not(checked) + label {
+  padding-left: 25px;
 }
 
 .form_block a {
@@ -2907,6 +2926,32 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   width: 14px;
   height: 14px;
   top: 0px;
+}
+
+.form_block .gUniForm .uformTools {
+  margin-top: -5px;
+}
+
+.form_block .gUniForm .uFormButton {
+  float: none;
+  width: auto;
+  margin-top: 0;
+}
+
+.form_block .gUniForm .uFormButton:last-child, .form_block .gUniForm .uFormButton:first-child {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form_block .gUniForm .uFormSubmit, .form_block .gUniForm .uFormReset {
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 5px;
+  height: 44px;
+}
+
+.form_block .gUniForm .uFormSubmit:active, .form_block .gUniForm .uFormReset:active {
+  top: 0;
 }
 
 .form_block .buttons {
@@ -3091,8 +3136,8 @@ footer {
   font-size: 14px;
   line-height: 17px;
   font-weight: 400;
-  background: url(../images/bg_footer.jpg), -webkit-gradient(linear, left top, left bottom, color-stop(23.96%, #1B537D), to(#0E2A53));
-  background: url(../images/bg_footer.jpg), linear-gradient(180deg, #1B537D 23.96%, #0E2A53 100%);
+  background: url(images/bg_footer.jpg), -webkit-gradient(linear, left top, left bottom, color-stop(23.96%, #1B537D), to(#0E2A53));
+  background: url(images/bg_footer.jpg), linear-gradient(180deg, #1B537D 23.96%, #0E2A53 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3108,6 +3153,11 @@ footer .page_width {
 
 footer a {
   color: #fff;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 footer .foo_left {
@@ -3130,6 +3180,10 @@ footer #foo_logo img {
   margin-right: 2px;
 }
 
+footer #foo_logo a:hover {
+  text-decoration: none;
+}
+
 footer #foo_logo .sub_logo {
   display: inline-block;
   width: 145px;
@@ -3145,7 +3199,7 @@ footer #foo_logo .sub_logo strong {
   font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
   color: transparent;
   text-shadow: 0 0 0px rgba(255, 255, 255, 0);
-  background: url(../images/logo_sub_white.svg) no-repeat left center/142px auto;
+  background: url(images/logo_sub_white.svg) no-repeat left center/142px auto;
 }
 
 footer .foo_right {
@@ -3248,6 +3302,7 @@ footer .contacts .order_coll {
   margin-top: 8px;
   margin-left: 36px;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 footer .contacts .order_coll:hover {
@@ -3432,13 +3487,17 @@ footer .social * {
   display: inline-block;
 }
 
-.title .breadcrumbs ul li a::after {
+.title .breadcrumbs ul li::after {
   content: "/";
   margin-left: 3px;
 }
 
 .title .breadcrumbs .active {
   color: #1FCEF7;
+}
+
+.title .breadcrumbs .active::after {
+  display: none;
 }
 
 .title h1 {
@@ -3547,26 +3606,26 @@ div.content .page_width h2 {
 }
 
 .product_tipes .jar {
-  background: url(../images/jar.jpg);
+  background: url(images/jar.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .product_tipes .jar::before {
-  background-image: url(../images/jar_green.jpg), -webkit-gradient(linear, left top, left bottom, color-stop(23.96%, #1B537D), to(#0E2A53));
-  background-image: url(../images/jar_green.jpg), linear-gradient(180deg, #1B537D 23.96%, #0E2A53 100%);
+  background-image: url(images/jar_green.jpg), -webkit-gradient(linear, left top, left bottom, color-stop(23.96%, #1B537D), to(#0E2A53));
+  background-image: url(images/jar_green.jpg), linear-gradient(180deg, #1B537D 23.96%, #0E2A53 100%);
 }
 
 .product_tipes .bottle {
-  background: url(../images/bottle.jpg);
+  background: url(images/bottle.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .product_tipes .bottle::before {
-  background-image: url(../images/bottle_green.jpg);
+  background-image: url(images/bottle_green.jpg);
 }
 
 .gray_bg {
@@ -3794,6 +3853,7 @@ div.content .page_width h2 {
 .galery {
   position: relative;
   overflow: hidden;
+  padding-bottom: 10px;
 }
 
 .galery:not(.galery_slider) {
@@ -3889,7 +3949,7 @@ div.content .page_width h2 {
   left: 0;
   top: 0;
   z-index: 0;
-  background: #fff url(../images/about_company_bg.jpg) no-repeat top/100% auto;
+  background: #fff url(images/about_company_bg.jpg) no-repeat top/100% auto;
 }
 
 .block_about h2 {
@@ -3986,19 +4046,19 @@ div.content .page_width h2 {
 }
 
 .contacts .tel::before {
-  background-image: url(../images/icon_phone_green.svg);
+  background-image: url(images/icon_phone_green.svg);
 }
 
 .contacts .email::before {
-  background-image: url(../images/icon_mail_green.svg);
+  background-image: url(images/icon_mail_green.svg);
 }
 
 .contacts .place::before {
-  background-image: url(../images/icon_place.svg);
+  background-image: url(images/icon_place.svg);
 }
 
 .contacts .time::before {
-  background-image: url(../images/icon_time.svg);
+  background-image: url(images/icon_time.svg);
 }
 
 .contacts_and_map {
@@ -4346,8 +4406,8 @@ div.content .page_width h2 {
   overflow: hidden;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background: url(../images/bg_blog_item_normal.png), -webkit-gradient(linear, left top, left bottom, color-stop(23.96%, #1B537D), to(#0E2A53));
-  background: url(../images/bg_blog_item_normal.png), linear-gradient(180deg, #1B537D 23.96%, #0E2A53 100%);
+  background: url(images/bg_blog_item_normal.png), -webkit-gradient(linear, left top, left bottom, color-stop(23.96%, #1B537D), to(#0E2A53));
+  background: url(images/bg_blog_item_normal.png), linear-gradient(180deg, #1B537D 23.96%, #0E2A53 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -4362,8 +4422,8 @@ div.content .page_width h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/bg_blog_item_hover.png), -webkit-gradient(linear, left top, left bottom, from(#E6E7EA), color-stop(50.95%, #F5F5F8), color-stop(67.71%, #FDFDFD), color-stop(82.88%, #FBFBFB), to(#E8EAEB));
-  background: url(../images/bg_blog_item_hover.png), linear-gradient(180deg, #E6E7EA 0%, #F5F5F8 50.95%, #FDFDFD 67.71%, #FBFBFB 82.88%, #E8EAEB 100%);
+  background: url(images/bg_blog_item_hover.png), -webkit-gradient(linear, left top, left bottom, from(#E6E7EA), color-stop(50.95%, #F5F5F8), color-stop(67.71%, #FDFDFD), color-stop(82.88%, #FBFBFB), to(#E8EAEB));
+  background: url(images/bg_blog_item_hover.png), linear-gradient(180deg, #E6E7EA 0%, #F5F5F8 50.95%, #FDFDFD 67.71%, #FBFBFB 82.88%, #E8EAEB 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -4407,4 +4467,4 @@ div.content .page_width h2 {
 }
 
 /* end blog styles */
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=template_styles.css.map */
