@@ -398,14 +398,14 @@ header.nobg{
     }
 }
 
-@media screen and (max-width:1673px){
+@media screen and (max-width:1670px){
     header .block_menu{
         .search{
             margin-left: 40px;
         }
     }            
 }
-@media screen and (max-width:1628px){
+@media screen and (max-width:1620px){
     header{
         .contacts{	
             a:first-child{
@@ -419,7 +419,7 @@ header.nobg{
         }
     }            
 }
-@media screen and (max-width:1585px){
+@media screen and (max-width:1580px){
     header{
         .button{
             margin-left: 40px;
@@ -446,7 +446,7 @@ header.nobg{
 
     }
 }
-@media screen and (max-width:1445px){
+@media screen and (max-width:1440px){
     header{
         #logo{
             width: 150px;
@@ -466,7 +466,7 @@ header.nobg{
         }
     }
 }
-@media screen and (max-width:1303px){
+@media screen and (max-width:1300px){
     header{
         #logo{
             width: 148px;
@@ -502,7 +502,7 @@ header.nobg{
         }
     }
 }
-@media screen and (max-width:1156px){
+@media screen and (max-width:1150px){
     header{
         .button{
             margin-left: 20px;
@@ -639,6 +639,44 @@ header.nobg{
                 display: block;
             }
         }
+
+        header.nobg{
+            .block_menu {
+                .search{
+                    border: 1px solid #8DB2CB;
+        
+                    input{
+                        &::placeholder{
+                            color:  #8DB2CB;
+                            ;
+                        }
+                        color: #8DB2CB;;
+                    }
+                }
+        
+                .language{
+                    .lang_item{
+                        color: $color_a;
+                    }
+                }
+
+                nav{
+                    .menu{
+
+                        li a{
+                            color: $color_a; 
+                        }
+            
+                        .submenu > ul{
+                            li a{
+                                color: #0063A5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
 }
 @media screen and (max-width:994px){
     header{
