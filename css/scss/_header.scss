@@ -28,6 +28,8 @@ header{
 				display: block;
 				letter-spacing: 3px;
 				font-family: $font_family_h;
+                color: transparent;
+                background: url(../images/logo_sub.svg) left center no-repeat;
 			}
 		}
     }
@@ -228,6 +230,10 @@ header{
                     li  ul {
                         display: none;
                     }
+                    .submenu ul {
+                        display: block;
+                    }
+
             }
             .submenu {
                 position: relative;
@@ -319,6 +325,10 @@ header.nobg{
 
     #logo .sub_logo {
         color: #fff;
+
+        strong {
+            background-image: url(../images/logo_sub_white.svg);
+        }
     }
 
     .contacts{

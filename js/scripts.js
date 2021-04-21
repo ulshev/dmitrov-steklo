@@ -263,5 +263,36 @@ $(document).ready(function() {
 		]
 	});
 
+
+	$('.product_images .main_slider').slick({
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    arrows: true,
+	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
+	    nextArrow: '<span class="slick-next">&nbsp;</span>',
+	    fade: true,
+	    //variableWidth: true,
+	    adaptiveHeight: true,
+	    asNavFor: '.product_images .preview_slider',
+	  });
+	$('.product_images .preview_slider').slick({
+	    slidesToShow: 2,
+	    slidesToScroll: 1,
+	    arrows: false,
+	    asNavFor: '.product_images .main_slider',
+	    dots: false,
+	    //centerMode: true,
+	    //vertical: true,
+	    focusOnSelect: true,
+	    responsive: [
+		  {
+		    breakpoint: 600,
+		    settings: {
+		      slidesToShow: 1,
+		    }
+		  },
+		]
+	});
+
 	
 });
