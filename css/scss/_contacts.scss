@@ -44,8 +44,9 @@
 }
 .contacts_and_map{
     display: flex;
-    align-items: center;
+    //align-items: center;
     box-shadow: 20px 20px 40px rgba(0, 43, 43, 0.2);
+    margin-bottom: 100px;
     .contacts{
         //padding: 0 40px 0 75px;
         padding: 20px 40px;
@@ -79,7 +80,7 @@
 
     .map{
         overflow: hidden;
-        height: calc(326px + 20px);
+        //height: calc(326px + 20px);
         //height: 100%;
         //width: 858px;
         width: 55%;
@@ -93,7 +94,8 @@
 }
 
 .departments{
-    margin-top: 100px;
+    //margin-top: 100px;
+    margin-bottom: 100px;
     h2{
         margin-bottom: 40px;
     }

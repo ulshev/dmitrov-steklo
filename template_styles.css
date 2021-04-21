@@ -547,6 +547,20 @@ ul.slick-dots li button {
   display: none;
 }
 
+.our_history_slider {
+  overflow: hidden;
+  margin-top: -50px;
+}
+
+.our_history_slider .text_and_img .text_img_item {
+  padding-top: 50px;
+}
+
+.our_history_slider .slick-list {
+  overflow: visible;
+  margin: 0;
+}
+
 .our_history_slider .slick-arrow {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(15.1%, #A3E419), to(#83BB0D));
   background: linear-gradient(180deg, #A3E419 15.1%, #83BB0D 100%);
@@ -1245,6 +1259,8 @@ header .block_menu nav .menu {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 header .block_menu nav .menu::before {
@@ -1261,8 +1277,6 @@ header .block_menu nav .menu::before {
 header .block_menu nav .menu li a {
   -webkit-transition: all .3s;
   transition: all .3s;
-  font-size: 18px;
-  font-weight: 600;
 }
 
 header .block_menu nav .menu li a:hover {
@@ -1280,6 +1294,16 @@ header .block_menu nav .menu .submenu ul {
 
 header .block_menu nav .submenu {
   position: relative;
+  white-space: nowrap;
+}
+
+header .block_menu nav .submenu::before {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  content: '';
+  top: 100%;
+  left: 0;
 }
 
 header .block_menu nav .submenu > a {
@@ -1317,6 +1341,7 @@ header .block_menu nav .submenu > ul {
   -webkit-box-shadow: 10px 10px 20px rgba(0, 43, 43, 0.1);
           box-shadow: 10px 10px 20px rgba(0, 43, 43, 0.1);
   padding: 15px 0 20px;
+  margin-top: 10px;
   pointer-events: none;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -1757,8 +1782,24 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
 #main_screen {
   overflow: hidden;
   height: 100vh;
-  min-height: 1000px;
+  min-height: 680px;
   background: url(images/bg_main_screen.jpg) no-repeat center/cover;
+}
+
+#main_screen.exclusive_products {
+  background-image: url(images/bg_main_screen_2.jpg);
+  height: 790px;
+}
+
+#main_screen.exclusive_products .page_width {
+  height: 620px;
+}
+
+#main_screen.exclusive_products .text {
+  top: 0px;
+  padding-top: 60px;
+  height: auto;
+  padding-bottom: 125px;
 }
 
 #main_screen .page_width {
@@ -2271,6 +2312,10 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
 
 #advantages .image {
   float: left;
+}
+
+.content + #advantages .page_width {
+  padding-top: 0px;
 }
 
 .advantages_container {
@@ -3472,7 +3517,7 @@ footer .social * {
 
 /* end footer styles */
 .title {
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 26px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3508,13 +3553,25 @@ footer .social * {
   margin-top: 31px;
 }
 
-div.content .page_width {
+.content .page_width {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-div.content .page_width h2 {
+.content .page_width h2 {
   margin-bottom: 40px;
+}
+
+main.content .page_width {
+  padding-bottom: 0px;
+}
+
+main.content .text {
+  margin-bottom: 100px;
+}
+
+.title + .content .page_width, .secondary_menu + .content .page_width, #partners + .content .page_width {
+  padding-top: 0px;
 }
 
 .product_tipes {
@@ -3525,7 +3582,6 @@ div.content .page_width h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 40px;
-  margin-bottom: 70px;
 }
 
 .product_tipes .tipes_item {
@@ -3727,6 +3783,7 @@ div.content .page_width h2 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   vertical-align: middle;
+  margin-bottom: 100px;
 }
 
 .text_and_img .text_img_item .text .button {
@@ -3854,6 +3911,7 @@ div.content .page_width h2 {
   position: relative;
   overflow: hidden;
   padding-bottom: 10px;
+  margin-bottom: 90px;
 }
 
 .galery:not(.galery_slider) {
@@ -3906,6 +3964,7 @@ div.content .page_width h2 {
   margin: 0 -15px;
   position: relative;
   z-index: 2;
+  margin-bottom: 100px;
 }
 
 .serteficats .item {
@@ -3977,24 +4036,40 @@ div.content .page_width h2 {
           box-shadow: 0px 10px 30px rgba(0, 43, 43, 0.1);
   border-radius: 5px;
   cursor: pointer;
-  /*.active{
-            display: block;
-        }*/
-}
-
-.open_vacansis .container:after {
-  content: '';
-  position: absolute;
-  top: 39px;
-  right: 60px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  background-color: #E1E7EB;
 }
 
 .open_vacansis .container h4 {
   margin-bottom: 0px;
+}
+
+.open_vacansis .container h4::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #E1E7EB;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.open_vacansis .container h4:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 69px;
+  margin-top: -6px;
+  width: 8px;
+  height: 8px;
+  border-left: 3px solid #000037;
+  border-bottom: 3px solid #000037;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .open_vacansis .container .open_block {
@@ -4014,11 +4089,26 @@ div.content .page_width h2 {
   margin-top: 20px;
 }
 
-.open_vacansis .active .open_block {
-  display: block;
+.open_vacansis .container.active h4::before {
+  background-color: #000037;
+}
+
+.open_vacansis .container.active h4::after {
+  border-color: #E1E7EB;
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  margin-top: -3px;
 }
 
 /*end vacansis*/
+.exsklusiv_galery_slider {
+  margin-bottom: 100px;
+}
+
+.hidden_text {
+  display: none;
+}
+
 /* start contacts styles*/
 .contacts a {
   font-size: 18px;
@@ -4065,11 +4155,9 @@ div.content .page_width h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-shadow: 20px 20px 40px rgba(0, 43, 43, 0.2);
           box-shadow: 20px 20px 40px rgba(0, 43, 43, 0.2);
+  margin-bottom: 100px;
 }
 
 .contacts_and_map .contacts {
@@ -4109,7 +4197,6 @@ div.content .page_width h2 {
 
 .contacts_and_map .map {
   overflow: hidden;
-  height: calc(326px + 20px);
   width: 55%;
 }
 
@@ -4123,7 +4210,7 @@ div.content .page_width h2 {
 }
 
 .departments {
-  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .departments h2 {

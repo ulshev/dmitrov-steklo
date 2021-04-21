@@ -608,8 +608,18 @@ ul.slick-dots {
 		}
 	}
 }
+.our_history_slider {
+    overflow: hidden;
+    margin-top: -50px;
 
-
+    .text_and_img .text_img_item {
+        padding-top: 50px;
+    }
+}
+.our_history_slider  .slick-list {
+    overflow: visible;
+    margin: 0;
+}
 .our_history_slider .slick-arrow{
     background: linear-gradient(180deg, #A3E419 15.1%, #83BB0D 100%);
     top: 60%;
@@ -625,6 +635,7 @@ ul.slick-dots {
     right: calc(50% + 80px);
     //margin-right: -48px;
 }
+
 
 @media screen and (max-width: 1400px) {
 	.slick-slider {

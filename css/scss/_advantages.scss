@@ -17,6 +17,12 @@
     }
 }
 
+.content + #advantages {
+    .page_width {
+		padding-top: 0px;
+    }
+}
+
 .advantages_container {
     margin-left: 780/1530*100%;
     position: relative;
@@ -177,9 +183,6 @@
 	
 }
 
-@media screen and (max-width: 900px) {
-	
-}
 @media screen and (max-width: 800px) {
     
 }

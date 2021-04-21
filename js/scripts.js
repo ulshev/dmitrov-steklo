@@ -121,13 +121,28 @@ $(document).ready(function() {
    	});
 
 
-
-
-
-	$('.container').click(function(){
-	    $(this).children('.open_block').slideToggle(700);
-	    $(this).children('.open_block').toggleClass('active');
+	$('.open_vacansis .container').click(function(){
+		if( !$(this).hasClass('active') ) {
+			$('.container').removeClass('active');
+			$('.open_block').slideUp(500);
+			$(this).addClass('active');
+			$(this).children('.open_block').slideDown(500);
+		}else{
+			$(this).removeClass('active');
+			$(this).children('.open_block').slideUp(500); 
+		}
    });
+
+	$('.more_text').on('click', function(){
+		$(this).addClass('hide');  
+		$(this).parent().parent().children('.hidden_text').slideDown(500);
+		//$(this).parent().children('hide_text').removeClass('hide');
+	});
+	$('.hide_text').on('click', function(){
+		//$(this).addClass('hide');  
+		$(this).parent().parent().parent().children('.hidden_text').slideUp(500);
+		$(this).parent().parent().parent().children().children('.more_text').removeClass('hide');
+	});
 
 	$('.catalog_slider').slick({
 	    slidesToShow: 4,
@@ -314,6 +329,7 @@ $(document).ready(function() {
 	    dots: false,
 	    //focusOnSelect: true,
 		arrows: true,
+		fade: true,
 		prevArrow: '<span class="slick-prev">&nbsp;</span>',
 		nextArrow: '<span class="slick-next">&nbsp;</span>',
 	});

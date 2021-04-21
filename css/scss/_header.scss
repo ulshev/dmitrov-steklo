@@ -202,6 +202,8 @@ header{
                 display: flex;
                 justify-content: space-between;
                 position: relative;
+                font-size: 18px;
+                font-weight: 600;
                 
     
                     &::before{
@@ -217,8 +219,6 @@ header{
     
                     li a{
                         transition: all .3s;
-                        font-size: 18px;
-                        font-weight: 600;
     
                         &:hover{
                             text-decoration: none;
@@ -237,6 +237,16 @@ header{
             }
             .submenu {
                 position: relative;
+                white-space: nowrap;
+
+                &::before {
+                    position: absolute;
+                    width: 100%;
+                    height: 10px;
+                    content: '';
+                    top: 100%;
+                    left: 0;
+                }
                 > a{
                 position: relative;
                 display: inline;
@@ -271,6 +281,7 @@ header{
                 display: block;
                 box-shadow: 10px 10px 20px rgba(0, 43, 43, 0.1);
                 padding: 15px 0 20px;
+                margin-top: 10px;
                 pointer-events: none;
                 transition: all .3s ;
                 background-color: #FFF;
