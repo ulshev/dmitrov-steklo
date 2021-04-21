@@ -43,20 +43,24 @@
      }
 }
 .contacts_and_map{
+    overflow: hidden;
     display: flex;
     align-items: center;
     box-shadow: 20px 20px 40px rgba(0, 43, 43, 0.2);
     .contacts{
         //padding: 0 40px 0 75px;
         padding: 20px 40px;
-        width: 45%;
+        width: 47%;
         display: flex;
         flex-wrap: wrap;
-        box-sizing: border-box;
+        //box-sizing: border-box;
         //width: 50%;
          .item{
-             width: calc(50% - 50px);
-             padding: 20px 5px 20px 45px;
+             //box-sizing: border-box;
+             //width: calc(50% - 50px);
+             width: calc(50% - 60px);
+             //padding: 20px 5px 20px 45px;
+             padding: 20px 5px 20px 55px;
              border-bottom: 1px solid #ABB8C0;
 
              .title{
@@ -70,7 +74,7 @@
          }
          .item:last-child{
              border-bottom: none;
-             padding: 20px 0px 20px 10px;
+             padding: 20px 0px 20px 20px;
              a:first-child{
                  margin-right: 30px;
              }
@@ -79,11 +83,12 @@
 
     .map{
         overflow: hidden;
-        height: calc(326px + 20px);
+        height: 421px;
         //height: 100%;
         //width: 858px;
-        width: 55%;
-        img,iframe{
+        width: 53%;
+        img,
+        iframe{
             object-fit: cover;
             object-position: top;
             width: 100%;
@@ -127,7 +132,7 @@
             }
         }
         .item:first-child{
-            padding: 20px 0 37px 85px;
+            padding: 20px 0 37px 95px;
         }
         .item:last-child{
             border-right: none;
@@ -135,7 +140,7 @@
     }
 }
 
-@media screen and (max-width:1697px){
+@media screen and (max-width:1700px){
     .contacts_and_map{
         .contacts{
             width: 55%;
@@ -145,16 +150,19 @@
         }
     }
 }
-@media screen and (max-width:1503px){
+@media screen and (max-width:1500px){
     .departments{
         .contacts{
             .item{
                 padding: 20px 0 20px 100px;
             }
+            .item:first-child{
+                padding: 20px 0 20px 95px;
+            }
         }
     }
 }
-@media screen and (max-width:1338px){
+@media screen and (max-width:1340px){
     .contacts_and_map{
         .contacts{
             width: 60%;
@@ -164,9 +172,9 @@
         }
     }
 }
-@media  screen and (max-width:1235px) {
+@media  screen and (max-width:1240px) {
     a,p > span{
-                font-size: 17px;
+        font-size: 17px;
     }
     .contacts_and_map{
         .contacts{
@@ -194,7 +202,7 @@
     .departments{
         flex-wrap: wrap;
         .contacts{
-            padding: 10px 20px 7px 20px;
+            padding: 10px 20px 7px 40px;
             .item{
                 width: 50%;
                 padding: 20px 0 3px 100px;
@@ -231,9 +239,22 @@
     }
     .departments{
         margin-top: 80px;
+
+        .contacts{
+            padding: 10px 20px 7px 45px;
+            .item:first-child{
+                padding: 20px 0 3px 55px;
+            }
+            .item:last-child{
+                padding: 20px 0 33px 55px;
+                margin-top: 30px;
+                border-top: 1px solid #ABB8C0;
+                width: 100%;
+            }
+        }
     }
 }
-@media  screen and (max-width:916px) {
+@media  screen and (max-width:920px) {
     .contacts_and_map{
         flex-direction: column-reverse;
         box-shadow: none;
@@ -243,32 +264,37 @@
         }
         .map{
             order: 1;
-            width: calc(100% - 80px);
+            width: calc(100%);
             box-shadow: 20px 20px 40px rgba(0, 43, 43, 0.2);
         }
     }
-}
-@media screen and (max-width:797px){
     .departments{
         .contacts{
-            .item{
-                padding: 20px 0 3px 70px;
+            padding: 10px 20px 7px 10px;
+            .item:first-child{
+                padding: 20px 0 3px 45px;
+            }
+            .item:last-child{
+                padding: 20px 0 33px 40px;
+                margin-top: 30px;
+                border-top: 1px solid #ABB8C0;
+                width: 100%;
             }
         }
     }
 }
-@media screen and (max-width:622px) {
+@media screen and (max-width:620px) {
     .contacts_and_map{
         .contacts{
             padding: 0 20px;
-        }
-        .map{
-            order: 1;
-            width: calc(100% - 40px);
+
+            .item:last-child a:first-child{
+                margin-left: 0px;
+            }
         }
     }
 }
-@media screen and (max-width:525px){
+@media screen and (max-width:530px){
     .departments{
         margin-top: 60px;
         h2{
@@ -279,15 +305,15 @@
             padding: 0px 10px 0px 10px;
             .item{
                 width: 100%;
-                padding: 20px 0 23px 55px;
+                padding: 20px 0 23px 45px;
                 border-right: none;
                 border-bottom: 1px solid #ABB8C0;
             }
             .item:first-child{
-                padding: 20px 0 23px 55px;
+                padding: 20px 0 23px 45px;
             }
             .item:last-child{
-                padding: 20px 0 23px 55px;
+                padding: 20px 0 23px 45px;
                 margin-top: 0px;
                 border-top: none;
                 border-bottom: none;
@@ -295,7 +321,7 @@
         }
     }
 }
-@media screen and (max-width:426px){
+@media screen and (max-width:430px){
     .contacts_and_map{
         .contacts{
             flex-direction: column;
@@ -305,10 +331,32 @@
                 width: calc(100% - 50px);
                 padding: 20px 5px 20px 45px;
             }
+
+            .item:last-child {
+                padding: 20px 0px 20px 10px;
+            
+            }
         }
-        .map{
-            order: 1;
-            width: calc(100% - 20px);
+    }
+    .departments{
+        .contacts{
+            box-shadow: none;
+            padding: 0px 0px;
+            .item{
+                width: 100%;
+                padding: 20px 5px 23px 45px;
+                border-right: none;
+                border-bottom: 1px solid #ABB8C0;
+            }
+            .item:first-child{
+                padding: 20px 5px 23px 45px;
+            }
+            .item:last-child{
+                padding: 20px 5px 23px 45px;
+                margin-top: 0px;
+                border-top: none;
+                border-bottom: none;
+            }
         }
     }
 }
