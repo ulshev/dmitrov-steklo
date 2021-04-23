@@ -1839,6 +1839,10 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
   position: relative;
 }
 
+#main_screen .title .breadcrumbs {
+  color: #fff;
+}
+
 #main_screen .title .breadcrumbs ul li > a {
   font-weight: 400;
   color: #fff;
@@ -1982,7 +1986,7 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
 }
 
 .catalog .item .info {
-  padding: 21px 34px 29px 20px;
+  padding: 21px 34px 5px 20px;
 }
 
 .catalog .item .info .h4 {
@@ -2005,6 +2009,12 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
 .catalog .item .characteristics .char {
   display: inline-block;
   max-width: 130px;
+  min-width: 120px;
+}
+
+.catalog .item .characteristics .char strong {
+  display: block;
+  min-height: 48px;
 }
 
 .catalog .item .buttons {
@@ -2133,6 +2143,11 @@ header.nobg .block_menu nav .menu .submenu > ul li a {
 
 .preview_slider.slick-slider .slick-list {
   margin: 0 -15px;
+}
+
+.preview_slider.slick-slider .slick-track {
+  -webkit-transform: none !important;
+          transform: none !important;
 }
 
 .preview_slider .item {
@@ -4359,6 +4374,10 @@ main.content .text {
      object-position: top;
   width: 100%;
   height: 100%;
+}
+
+.contacts_and_map .map div, .contacts_and_map .map .ymaps-map {
+  height: 100% !important;
 }
 
 .departments {
