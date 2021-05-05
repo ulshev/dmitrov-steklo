@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$('footer').append($('.gUniFormModalWindow'));
+	$('footer').append($('.gUniFormSuccess'));
+	
 	// Убираем placeholder при клике в поле
 	$('input,textarea').focus(function(){
 	    $(this).data('placeholder',$(this).attr('placeholder'))
@@ -10,10 +13,10 @@ $(document).ready(function() {
 
     // animation
 	if ( window.innerWidth>0 ){
-		$('#header').toggleClass("hidden");
-		$('.main_section').toggleClass("hidden");
-		$('#header').addClass('animated');
-		$('#main_screen').addClass('animated');
+		//$('#main_header').toggleClass("hidden");
+		//$('.main_section').toggleClass("hidden");
+		$('#main_header').addClass('animated');
+		//$('#main_screen').addClass('animated');
 	};
 	$(window).on('load scroll', function(){
 	    $('.main_section').each(function(){
@@ -21,6 +24,12 @@ $(document).ready(function() {
 		    $(this).addClass('animated');
 		}
 	    });
+
+		$('.content .text_and_img').each(function(){
+			if ( $(this).offset().top < ($(document).scrollTop() + window.innerHeight*0.6 ) ) {
+				$(this).addClass('animated');
+			}
+		});
 	});
 	
 	// tab switching
@@ -65,7 +74,7 @@ $(document).ready(function() {
 	});
 
 
-    if ( window.innerWidth < 1030 ) {
+    if ( window.innerWidth < 1125 ) {
 	    $('.menu .submenu > a').on('click', function(e){
 		    if( !$(this).parent().hasClass('show') ) {
 				$(".menu .submenu").removeClass('show'); 
@@ -77,59 +86,36 @@ $(document).ready(function() {
 		});
     };
 
-	/*$(window).on('load scroll resize', function(){
-		//var height = $(window).height() - 100;
-		if($(this).scrollTop() > 10) {
-		    $('#main_header').addClass('scroll');
-		} else {
-		    $('#main_header').removeClass('scroll');
-		} 
-	});*/
-
-
-	// Проверка заполнености полей формы
-	$('.rf').each(function(){
-		var form = $(this);
-		//form.find('.rfield').addClass('empty_field');
+	if ( window.innerWidth < 1031 ) {
+		// добовляет класс подменю
+		$('.foo_menu > ul > li').each(function(){
+			var list = $(this).children('ul');
 	
-		function checkInput(){
-		  form.find('.rfield').each(function(){
-			if($(this).val() != ''){
-				$(this).addClass('filled_field');
-			} else {
-				$(this).removeClass('filled_field');
-			}
-		  });
-		  form.find('#file').each(function(){
-			if($(this).val() != ''){
-				$("#file_name").html(filename);
-			} else {
-				$("#file_name").html("Файл не выбран");
-			}
-		  });
-		}
-		setInterval(function(){
-			
-			//$("#file_name").html("Файл не выбран");
-		  checkInput();
-		},500);
-	});
-	//Добавление имени файла в форме при выборе
-	$("#file").change(function(){
-		var filename = $(this).val().replace(/.*\\/, "");
-		$("#file_name").html(filename);
-   	});
+			if(list.length > 0){
+				list.parent().addClass('submenu');
+			};
+		});
+	    $('.foo_menu .submenu > a').on('click', function(e){
+		    if( !$(this).parent().hasClass('show') ) {
+				$(".foo_menu .submenu").removeClass('show'); 
+				$(".foo_menu .submenu").children('ul').slideUp(500);
+				$(this).parent().addClass('show');  
+				$(this).parent().children('ul').slideDown(500);
+				e.preventDefault();
+		    }
+		});
+    };
 
 
-	$('.open_vacansis .container').click(function(){
-		if( !$(this).hasClass('active') ) {
+	$('.open_vacansis .container h4').click(function(){
+		if( !$(this).parent().hasClass('active') ) {
 			$('.container').removeClass('active');
 			$('.open_block').slideUp(500);
-			$(this).addClass('active');
-			$(this).children('.open_block').slideDown(500);
+			$(this).parent().addClass('active');
+			$(this).parent().children('.open_block').slideDown(500);
 		}else{
-			$(this).removeClass('active');
-			$(this).children('.open_block').slideUp(500); 
+			$(this).parent().removeClass('active');
+			$(this).parent().children('.open_block').slideUp(500); 
 		}
    });
 
@@ -152,27 +138,28 @@ $(document).ready(function() {
 	    //focusOnSelect: true,
 		arrows: true,
 		adaptiveHeight: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
 		prevArrow: '<span class="slick-prev">&nbsp;</span>',
 		nextArrow: '<span class="slick-next">&nbsp;</span>',
 		responsive: [
 			{
-				breakpoint: 1401,
+				breakpoint: 1451,
 				settings: {
 				  slidesToShow: 3,
 				}
 			},
 			{
-				breakpoint: 1100,
+				breakpoint: 1201,
 				settings: {
 				  slidesToShow: 2,
 				}
 			},
 			
 			{
-				breakpoint: 601,
+				breakpoint: 701,
 				settings: {
 				  slidesToShow: 1,
-				  dots: true,
 				}
 			},
 		]
@@ -185,6 +172,8 @@ $(document).ready(function() {
 	    dots: false,
 	    //focusOnSelect: true,
 		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
 		prevArrow: '<span class="slick-prev">&nbsp;</span>',
 		nextArrow: '<span class="slick-next">&nbsp;</span>',
 		responsive: [
@@ -195,17 +184,16 @@ $(document).ready(function() {
 				}
 			},
 			{
-				breakpoint: 1100,
+				breakpoint: 900,
 				settings: {
 				  slidesToShow: 2,
 				}
 			},
 			
 			{
-				breakpoint: 601,
+				breakpoint: 501,
 				settings: {
 				  slidesToShow: 1,
-				  dots: true,
 				}
 			},
 		]
@@ -217,7 +205,10 @@ $(document).ready(function() {
 	    infinite: true,
 	    dots: false,
 	    //focusOnSelect: true,
+		centerMode: true,
 		arrows: true,
+		//autoplay: true,
+		//autoplaySpeed: 3000,
 		prevArrow: '<span class="slick-prev">&nbsp;</span>',
 		nextArrow: '<span class="slick-next">&nbsp;</span>',
 		responsive: [
@@ -232,7 +223,6 @@ $(document).ready(function() {
 				breakpoint: 601,
 				settings: {
 				  slidesToShow: 1,
-				  dots: true,
 				}
 			},
 		]
@@ -245,6 +235,8 @@ $(document).ready(function() {
 	    dots: false,
 	    //focusOnSelect: true,
 		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
 		prevArrow: '<span class="slick-prev">&nbsp;</span>',
 		nextArrow: '<span class="slick-next">&nbsp;</span>',
 		responsive: [
@@ -259,7 +251,6 @@ $(document).ready(function() {
 				breakpoint: 601,
 				settings: {
 				  slidesToShow: 1,
-				  dots: true,
 				}
 			},
 		]
@@ -272,11 +263,13 @@ $(document).ready(function() {
 	    dots: false,
 	    //focusOnSelect: true,
 		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
 		prevArrow: '<span class="slick-prev">&nbsp;</span>',
 		nextArrow: '<span class="slick-next">&nbsp;</span>',
 		responsive: [
 			{
-				breakpoint: 1100,
+				breakpoint: 1101,
 				settings: {
 				  slidesToShow: 2,
 				}
@@ -286,7 +279,6 @@ $(document).ready(function() {
 				breakpoint: 601,
 				settings: {
 				  slidesToShow: 1,
-				  dots: true,
 				}
 			},
 		]
@@ -332,6 +324,62 @@ $(document).ready(function() {
 		fade: true,
 		prevArrow: '<span class="slick-prev">&nbsp;</span>',
 		nextArrow: '<span class="slick-next">&nbsp;</span>',
+	});
+
+	$(window).on('load resize', function(){
+		if ( window.innerWidth>801 && $('.benefits').hasClass('slick-initialized') ) {
+		  $('.benefits').slick('unslick');
+		} else if ( window.innerWidth<=801 && !$('.benefits').hasClass('slick-initialized') ) {
+			$('.benefits').slick({
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				arrows: true,
+				dots: false,
+				//centerMode: true,
+				//variableWidth: true,
+				infinite: true,
+				prevArrow: '<span class="slick-prev">&nbsp;</span>',
+				nextArrow: '<span class="slick-next">&nbsp;</span>',
+				responsive: [
+					{
+						breakpoint: 550,
+						settings: {
+							slidesToShow: 1,
+						}
+					},
+				]
+			});
+
+	
+		}
+	});
+
+	$(window).on('load resize', function(){
+		if ( window.innerWidth>1101 && $('.serteficats').hasClass('slick-initialized') ) {
+		  $('.serteficats').slick('unslick');
+		} else if ( window.innerWidth<=1101 && !$('.serteficats').hasClass('slick-initialized') ) {
+			$('.serteficats').slick({
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				arrows: true,
+				dots: false,
+				//centerMode: true,
+				//variableWidth: true,
+				infinite: true,
+				prevArrow: '<span class="slick-prev">&nbsp;</span>',
+				nextArrow: '<span class="slick-next">&nbsp;</span>',
+				responsive: [
+					{
+						breakpoint: 800,
+						settings: {
+							slidesToShow: 1,
+						}
+					},
+				]
+			});
+
+	
+		}
 	});
 	
 });

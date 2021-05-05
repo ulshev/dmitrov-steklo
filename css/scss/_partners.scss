@@ -37,32 +37,31 @@
 
 
 
-@media screen and (min-width: 1030px) {
-    
-}
-
-
-@media screen and (max-width: 1500px) {
-	
-}
-
 @media screen and (max-width: 1030px) {
-	
+	.partners_slider {
+        margin-bottom: 80px;
+    }
 }
 
-@media screen and (max-width: 900px) {
+// @media screen and (max-width: 900px) {
 	
-}
-@media screen and (max-width: 800px) {
+// }
+// @media screen and (max-width: 800px) {
     
-}
+// }
 
 @media screen and (max-width: 600px) {
-    
+    .partners_slider {
+        margin-bottom: 60px;
+
+        .slick-list {
+            margin: 0 20px;
+        }
+    }
 }
 
-@media screen and (max-width: 450px) {
+// @media screen and (max-width: 450px) {
     
-}
+// }
 
 /* end partners styles */

@@ -34,14 +34,15 @@
         .item {
             opacity: 0;
 
-            &.slick-active {
-                opacity: 1;
-            }
+            // &.slick-active {
+            //     opacity: 1;
+            // }
         }
     }
 
     .slick-list {
         overflow: visible;
+        padding: 0 !important;
     }
 
     .item { 
@@ -72,7 +73,7 @@
             @include transition(all);
         }
 
-        &:hover {
+        &:hover, &.slick-current {
             &::before {
                 opacity: 1;
             }
@@ -116,8 +117,24 @@
 
 
 
-@media screen and (min-width: 1030px) {
-    
+@media screen and (min-width: 1100px)  {
+    .blog_container.blog_slider .item[data-slick-index="0"], 
+    .blog_container.blog_slider .item[data-slick-index="1"], 
+    .blog_container.blog_slider .item[data-slick-index="2"] {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 600px) {
+    .blog_container.blog_slider .item[data-slick-index="-1"], 
+    .blog_container.blog_slider .item[data-slick-index="0"] {
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 600px) {
+    .blog_container.blog_slider .item.slick-current {
+        opacity: 1;
+    }
 }
 
 
@@ -138,11 +155,11 @@
         }
 
         .item { 
+            height: 276px;
+            margin: 0 10px 55px;
             a{
                 padding: 20px;
             }
-            margin: 0 10px 55px;
-            height: 316px;
 
             .more{
                 bottom: 30px;
@@ -168,6 +185,28 @@
             .item {
                 width: calc(100% - 20px);
                 margin-bottom: 20px;
+            }
+        }
+
+        &.blog_slider {
+            margin: 0 -10px;
+                padding: 0 10px 15px;
+            .slick-list {
+                margin: 0 -10px;
+                //padding: 0 10px;
+            }
+
+            .slick-arrow {
+                top: 100%;
+                margin-top: -40px;
+            }
+            .slick-prev {
+                left: 50%;
+                margin-left: -60px;
+            }
+            .slick-next {
+                right: 50%;
+                margin-right: -60px;
             }
         }
 

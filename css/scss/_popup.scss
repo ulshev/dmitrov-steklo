@@ -1,0 +1,257 @@
+.gUniFormModalWindow.form_block {
+    background: rgba(0, 0, 35, 0.7);
+    max-width: none;
+    color: $color_text;
+
+    .gUniFormModalWindowContainer {
+        border-radius: 0;
+        line-height: 28px;
+        padding: 0;
+        width: 82%;
+        max-width: 490px;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: none;
+    }
+
+    .gUniFormContainer {
+        //background: #fff;
+        //border-radius: 5px;
+        padding: 45px 10px 25px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        box-sizing: border-box;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .uFormHeading {
+        font-family: $font_family_h;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 0px;
+        //text-transform: uppercase;
+    }
+
+    .uFormDescription {
+        font-size: 14px;
+        line-height: 20px;
+        color: $color_text;
+        max-width: 250px;
+        margin:  0 auto 20px;
+    }
+
+    form {
+        padding: 0px;
+    }
+
+    .gUniFormModalWindowExit {
+        width: 21px;
+        height: 21px;
+        top: 20px;
+        right: 20px;
+        border-radius: 0%;
+        transform: rotate(-45deg);
+        background: none;
+        position: absolute !important;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            border-top: 3px solid $color_text;
+            top: 50%;
+            left: 50%;
+            margin: -1px 0 0 -13px;
+            @include transition(all);
+        }
+        &::after {
+            transform: rotate(90deg);
+        }
+
+        // &:hover {
+        //     &::before, &::after {
+        //         background-color: #262945;
+        //     }
+        // }
+    }
+
+    .input_personal_info {
+        float: none;
+        max-width: none;
+        margin-bottom: 30px;
+    }
+
+    .gUniForm .uformTools {
+        margin-top: 0px;
+        padding-top: 0;
+    }
+
+    .button {
+        margin: 0;
+        float: none;
+    }
+
+    a {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+
+        &:hover {
+            color: $color_text;
+        }
+    }
+
+    .input_file {
+        text-align: left;
+        display: block;
+    }
+
+
+    // input[type="checkbox"]:not(checked) + label {
+	// 	padding-left: 30px;
+	// 	&:before {
+	// 		width: 15px;
+	// 		height: 15px;
+	// 		background: #fff;
+    //         border: 1px solid #CFDBE7;
+    //         top: 0;
+	// 	}
+		
+	// 	&:after {
+	// 		width: 11px;
+	// 		height: 5px;
+    //         border-color: $color_a;
+    //         transform: rotate(-56deg);
+	// 	}
+
+	// 	&:hover {
+	// 		opacity: 0.8;
+	// 	}
+    // }
+
+    // input[type=file] + label {
+    //     border-color: #EEF5F9;
+    //     background-color: #EEF5F9;
+    //     &:hover {
+    //         background-color: #fff;
+    //         //border-color: #EEF5F9;
+    //         color: $color_text;
+    //     }
+    // }
+    // .small {
+    //     margin-bottom: 50px;
+    // }
+
+}
+
+.gUniFormSuccess.form_success {
+    background: rgba(0, 0, 35, 0.7);
+    max-width: none;
+    color: $color_text;
+
+    .gUniFormSuccessContainer {
+        border-radius: 0;
+        line-height: 28px;
+        padding: 0;
+        width: 82%;
+        max-width: 390px;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: none;
+        border: 0;
+        height: auto;
+        margin-top: -70px;
+        margin-left: -195px;
+    }
+
+    .gUniFormSuccessBg {
+        //background: #fff;
+        //border-radius: 5px;
+        padding: 45px 10px 25px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        box-sizing: border-box;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .gUniFormSuccessHeading {
+        font-family: $font_family_h;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 0px;
+        //text-transform: uppercase;
+    }
+
+    .gUniFormSuccessText {
+        font-size: 14px;
+        line-height: 20px;
+        color: $color_text;
+        max-width: 250px;
+        margin:  0 auto 20px;
+    }
+
+    .gUniFormSuccessExit {
+        width: 21px;
+        height: 21px;
+        top: 20px;
+        right: 20px;
+        border-radius: 0%;
+        transform: rotate(-45deg);
+        background: none;
+        position: absolute !important;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            border-top: 3px solid $color_text;
+            top: 50%;
+            left: 50%;
+            margin: -1px 0 0 -13px;
+            @include transition(all);
+        }
+        &::after {
+            transform: rotate(90deg);
+        }
+
+        // &:hover {
+        //     &::before, &::after {
+        //         background-color: #262945;
+        //     }
+        // }
+    }
+}
+
+
+// @media screen and (max-width: 1600px) {
+
+// }
+
+@media screen and (max-width: 1300px) {
+    
+}
+@media screen and (max-width: 1030px) {
+    
+}
+@media screen and (max-width: 900px) {
+    
+}
+
+@media screen and (max-width: 800px) {
+    
+}
+
+@media screen and (max-width: 600px) {
+
+}
+// @media screen and (max-width: 450px) {
+
+// }

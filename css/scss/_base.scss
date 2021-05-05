@@ -456,6 +456,10 @@ h6, .h6 {
 }
 
 @media screen and (max-width: 1030px) {
+    .button {
+        font-size: 14px;
+        height: 41px;
+    }
     .buttons {
         padding-bottom: 10px;
     
@@ -469,16 +473,17 @@ h6, .h6 {
     }
 }
 @media screen and (max-width: 600px) {
-	.all_link::after, .more::after {
-        width: 20px;
-    }
+	.button {
+        height: 31px;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 0 10px;
+        min-width: 95px;
 
-    // .all_link {
-    //     margin-top: 0px;
-    //     float: none;
-    //     margin-bottom: 20px;
-    //     display: inline-block;
-    // }
+        &.btn_blue {
+            font-weight: 400;
+        }
+    }
 }
 
 
@@ -559,55 +564,6 @@ h6, .h6 {
     }
 }
 
-ul.slick-dots {
-    position: absolute;
-    bottom: 35px;
-    width: 100%;
-    z-index: 2; 
-    //counter-reset: slick-dots;
-    //border-top: 1px dotted #000;
-    //margin-top: 69px;
-    //padding-top: 52px;
-    text-align: center;
-    
-    li {
-		display: inline-block;
-		position: relative;
-		width: 10px;
-		height: 10px;
-		border-radius: 5px;
-		border: 1px solid #fff;
-		background-color: transparent;
-		cursor: pointer;
-        //float: none;
-        margin: 0 5px 10px;
-        //font-family: $font_family_h;
-		font-size: 14px;
-        font-weight: 500;
-		line-height: 35px;
-		//letter-spacing: 1.3px;
-		color: $color_text;
-		//opacity: 0;
-        text-align: center;
-        box-sizing: border-box;
-        @include transition(all);
-        
-		// &:before {
-		// 	counter-increment: slick-dots;
-		// 	content: "0"counter(slick-dots);
-		// 	overflow: hidden;
-		// 	display: inline-block;
-		// }
-
-		&:hover, &.slick-active {
-			background-color: #fff;
-		}
-		
-		button {
-			display: none;
-		}
-	}
-}
 .our_history_slider {
     overflow: hidden;
     margin-top: -50px;
@@ -642,6 +598,18 @@ ul.slick-dots {
 		margin: 0 -5px;
         //padding: 0 45px;
 	}
+    .our_history_slider {
+        margin: 0 -50px;
+        padding: 0 50px;
+        
+        .text_and_img .text_img_item {
+            padding-top: 0px;
+            .image {
+                width: 50%;
+            }
+        }
+    }
+    
 }
 
 @media screen and (max-width:1350px){
@@ -667,6 +635,10 @@ ul.slick-dots {
 		margin: 0 10px;
 		padding: 0 60px;
 	}
+    .our_history_slider {
+        margin: 0 -30px;
+        padding: 0 30px;
+    }
 }
 
 @media screen and (max-width: 1030px) {
@@ -674,25 +646,49 @@ ul.slick-dots {
 		margin: 0 0px;
 		//padding: 0 60px;
 	}
+    .our_history_slider {
+        margin: 0 -30px;
+        .text_and_img .text_img_item {
+            padding-top: 0px;
+        }
+    }
+}
+@media screen and (max-width: 730px) {
+	.our_history_slider {
+        //padding-bottom: 40px;
+        margin-bottom: 60px;
+        .slick-arrow{
+            top: auto;
+            bottom: 0;
+        }
+
+         .slick-prev {
+            left: 10px;
+            //margin-left: -48px;
+        }
+         .slick-next {
+            left: 70px;
+            //margin-right: -48px;
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
     .slick-slider {
 		padding: 0 0px;
 	}
-    
-    ul.slick-dots li {
-        width: 6px;
-        height: 6px;
-        margin: 0 5px 10px;
+    .our_history_slider {
+        margin: 0 -10px 60px;
+        padding: 0 10px;
     }
+    
 }
 
-@media screen and (max-width: 400px) {
-    .slick-slider {
-		margin: 0 -10px;
-	}
-}
+// @media screen and (max-width: 400px) {
+//     .slick-slider {
+// 		margin: 0 -10px;
+// 	}
+// }
 
 .text {
     ul {
@@ -712,7 +708,7 @@ ul.slick-dots {
                 position: absolute;
                 width: 18px;
                 height: 18px;
-                top: 0px;
+                top: 2px;
                 left: 0px;
                 border-radius: 50%;
                 background: linear-gradient(180deg, #A3E419 15.1%, #83BB0D 100%);
@@ -720,10 +716,10 @@ ul.slick-dots {
             &::after{
                 content: "";
                 position: absolute;
-                width: 8px;
-                height: 5px;
+                width: 9px;
+                height: 6px;
                 top: 7px;
-                left: 6px;
+                left: 5px;
                 border-left: 2px solid #FFFFFF;
                 border-bottom: 2px solid #FFFFFF;
                 box-sizing: border-box;
@@ -760,13 +756,16 @@ ul.slick-dots {
     }
 }
 
-// @media screen and (max-width:1030px){
-//     .text {
-//         .button {
-//             margin-top: 30px;
-//         }
-//     }
-// }
+@media screen and (max-width:1030px){
+    .text {
+        ul li::before {
+            top: 0px;
+        }
+        ul li::after {
+            top: 5px;
+        }
+    }
+}
 @media screen and (max-width:600px){
     .text {
         font-size: 14px;
@@ -893,6 +892,10 @@ ul.slick-dots {
 .pagination{
     text-align: center;
     margin-bottom: 100px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
     ul{
         li{
             display: inline-block;
@@ -902,7 +905,7 @@ ul.slick-dots {
             line-height: 21px;
             font-weight: 700;
 
-            
+            a{
                 box-sizing: border-box;
                 text-decoration: none;
                 color: $color_text;
@@ -912,12 +915,13 @@ ul.slick-dots {
                 padding-top: 5px; 
                 //border: 1px solid #212121;
                 @include transition(all);
-
-            
-
+                display: block;
+                    
             &.activ, &:hover {
                 background: linear-gradient(180deg, #A3E419 15.1%, #83BB0D 100%);
             }
+            }
+            
         }
             .pag-ar{
                 font-size: 16px;
@@ -986,6 +990,10 @@ ul.slick-dots {
 
 }
 
+.catalog + .pagination {
+    margin-bottom: 100px;
+}
+
 @media screen and (max-width:1030px){
     .tab_buttons {
         span, a {
@@ -1019,41 +1027,48 @@ ul.slick-dots {
         position: relative;
         ul{
             li{
-                display: none;
+                margin: 0 -4px 0 0;
+                a {
+                    display: none;
+                    margin: 0 5px;
+                }
+                
 
-                &.activ{
+                a.activ{
                     position: static;
-                    display: inline-block;
+                    display: block;
                     text-align: center;
-                    margin: 0 30px;
+                    margin: 0 35px;
                 }
             }
                 .pag-ar{
-                    display: inline-block;
+                    display: block;
                     margin: 0 0;
                     &:hover{
                         background: none;
                     }
                 }
-                .prev {
-                    position: absolute;
-                    left: 0;
-                    margin-right: 0px;
-                    &:before {
-                        right: 50%;
-                        margin-right: -6px;
-                        transform: rotate(-45deg);
-                    }
+                li .prev {
+                    // position: absolute;
+                    // left: 0;
+                    // margin-right: 0px;
+                    // &:before {
+                    //     right: 50%;
+                    //     margin-right: -6px;
+                    //     transform: rotate(-45deg);
+                    // }
+                    margin-right: 10px;
                 }
-                .next {
-                    position: absolute;
-                    right: 0;
-                    margin-left: 0px;
-                    &:before {
-                        left: 50%;
-                        margin-left: -6px;
-                        transform: rotate(135deg);
-                    }
+                li .next {
+                    // position: absolute;
+                    // right: 0;
+                    // margin-left: 0px;
+                    // &:before {
+                    //     left: 50%;
+                    //     margin-left: -6px;
+                    //     transform: rotate(135deg);
+                    // }
+                    margin-left: 10px;
                 }
             }
         }
